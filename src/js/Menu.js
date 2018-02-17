@@ -9,9 +9,9 @@ function Menu(props) {
         <div className="menu">
             <Link to='/' className="drop-down-title">START</Link>
             <DropDown title="WIEM">
-                <Link to='falszywe-wiadomosci'>FAKE NEWS (fałszywe wiadomości)</Link>
-                <Link to='wyludzanie-danych'>PHISHING (wyłudzanie danych)</Link>
-                <Link to='blokowanie-reklam'>ADBLOCK (blokowanie reklam)</Link>
+                <Link to='falszywe-wiadomosci'>FAKE NEWS</Link>
+                <Link to='wyludzanie-danych'>PHISHING</Link>
+                <Link to='blokowanie-reklam'>ADBLOCK</Link>
                 <Link to='spam'>Spam</Link>
                 <Link to='click-baity'>Click baity</Link>
                 <Link to='memy'>Memy</Link>

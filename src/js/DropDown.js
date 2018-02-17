@@ -23,7 +23,9 @@ class DropDown extends Component {
         return (
             <div className="drop-down">
                 <a href="#" className="drop-down-title" onClick={this.handleClick}>{this.props.title}</a>
-                {(visible && this.props.children)}
+                {(visible && 
+                    <div classname="drop-down-content">{this.props.children}</div>
+                )}
             </div>
         );
     }

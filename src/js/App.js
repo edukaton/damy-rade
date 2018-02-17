@@ -4,6 +4,7 @@ import '../css/App.css';
 
 import Menu from './Menu';
 import Home from './Home';
+import Spam from '../games/spam/js/Spam';
 
 class App extends Component {
   constructor() {
@@ -25,6 +26,7 @@ class App extends Component {
           <Menu />
           <div className="content">
             <Route exact path="/" component={Home} />
+            <Route exact path="/spam" component={Spam} />
           </div>
         </div>
       </Router>

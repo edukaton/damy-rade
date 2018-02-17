@@ -1,0 +1,76 @@
+.spam-game h1 {
+  margin: 0 0 10px;
+}
+
+.spam-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background: #fefefe;
+}
+
+.spam-game .messages {
+  background: #fff;
+  border: 2px solid #444;
+}
+
+.spam-game .message {
+  background: #eee;
+  padding: 5px;
+  margin: 5px 0;
+  transition: background 500ms ease-in;
+}
+
+.spam-game .message-sender {
+  margin: 0 5px;
+}
+
+.spam-game .message-date {
+  margin: 0 5px;
+}
+
+.spam-game .message-title {
+  font-size: 20px;
+  margin: 0;
+  display: inline-block;
+}
+
+.spam-game .message-spam {
+  background: #ff6e6e;
+}
+
+.spam-game .message-good {
+  background: #bed69f;
+}
+
+.spam-game .message-button {
+  display: inline-block;
+  width: 50%;
+  background: rgba(255,255,255,0.spam-game .7);
+  border: 1px solid #ddd;
+  height: 30px;
+  font-size: 20px;
+}
+
+.spam-game .message-date {
+  float: right;
+}
+
+.spam-game .animation-enter {
+  opacity: 0.spam-game .01;
+}
+
+.spam-game .animation-enter.spam-game .animation-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.spam-game .animation-leave {
+  opacity: 1;
+}
+
+.spam-game .animation-leave.spam-game .animation-leave-active {
+  opacity: 0.spam-game .01;
+  transition: opacity 300ms ease-in;
+}

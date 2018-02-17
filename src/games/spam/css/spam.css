@@ -12,7 +12,7 @@
 
 .spam-game .messages {
   background: #fff;
-  border: 2px solid #444;
+  width: 100%;
 }
 
 .spam-game .message {
@@ -47,7 +47,7 @@
 .spam-game .message-button {
   display: inline-block;
   width: 50%;
-  background: rgba(255,255,255,0.spam-game .7);
+  background: rgba(255,255,255,0.7);
   border: 1px solid #ddd;
   height: 30px;
   font-size: 20px;
@@ -57,20 +57,20 @@
   float: right;
 }
 
-.spam-game .animation-enter {
-  opacity: 0.spam-game .01;
+.animation-enter {
+  opacity: 0.01;
 }
 
-.spam-game .animation-enter.spam-game .animation-enter-active {
+.animation-enter.animation-enter-active {
   opacity: 1;
   transition: opacity 500ms ease-in;
 }
 
-.spam-game .animation-leave {
+.animation-leave {
   opacity: 1;
 }
 
-.spam-game .animation-leave.spam-game .animation-leave-active {
-  opacity: 0.spam-game .01;
+.animation-leave.animation-leave-active {
+  opacity: 0.01;
   transition: opacity 300ms ease-in;
 }

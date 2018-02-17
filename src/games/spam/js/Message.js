@@ -16,7 +16,8 @@ function Message(props) {
             <CSSTransitionGroup
                 transitionName="animation"
                 transitionEnterTimeout={500}
-                transitionLeaveTimeout={300}>
+                transitionLeaveTimeout={300}
+            >
                 {showButtons && <button className="message-button" onClick={() => props.onSpamClick()}>Spam</button>}
                 {showButtons && <button className="message-button" onClick={() => props.onGoodClick()}>Dobra wiadomość</button>}
             </CSSTransitionGroup>

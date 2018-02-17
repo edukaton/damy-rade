@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { CSSTransitionGroup } from 'react-transition-group';
+
 class DropDown extends Component {
     constructor(props) {
         super(props);
@@ -14,7 +16,7 @@ class DropDown extends Component {
     handleClick() {
         let visible = this.state.visible;
 
-        visible ? this.setState({visible: false}) : this.setState({visible: true});
+        visible ? this.setState({ visible: false }) : this.setState({ visible: true });
     }
 
     render() {
@@ -23,9 +25,15 @@ class DropDown extends Component {
         return (
             <div className="drop-down">
                 <a href="#" className="drop-down-title" onClick={this.handleClick}>{this.props.title}</a>
-                {(visible && 
-                    <div className="drop-down-content">{this.props.children}</div>
-                )}
+                <CSSTransitionGroup
+                    transitionName="test"
+                    transitionEnterTimeout={500}
+                    transitionLeaveTimeout={300}
+                >
+                    {(visible &&
+                        <div className="drop-down-content">{this.props.children}</div>
+                    )}
+                </CSSTransitionGroup>
             </div>
         );
     }

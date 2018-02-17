@@ -10,32 +10,6 @@ h1{
     display: flex;
 }
 
-.menu {
-    width: 20%;
-    min-height: 100vh;
-}
-.drop-down-title  {
-    font-size: 24px;
-    margin-left: 15px;      
-    margin-top: 10px; 
-    text-decoration: none;
-    color: black;
-}
-.drop-down-content a {
-    cursor: pointer;
-    font-size: 24px;
-    margin-left: 30px;
-    display: block;
-    text-decoration: none;
-    color: black;
-}
-.drop-down-title:hover{
-    color: grey;
-}
-.drop-down-content a:hover {
-    color: grey;
-}
-
 .content {
     width: 80%;
     min-height: 100vh;

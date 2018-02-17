@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Message from './message';
+import Message from './Message';
 import { CSSTransitionGroup } from 'react-transition-group';
 import '../css/spam.css';
 

@@ -8,7 +8,7 @@ class Menu extends Component {
         return (
             <div className="menu">
                 <ul>
-                    <DropDown title="Test">
+                    <DropDown title="Test" className="menu">
                         <li>Hehhehehhe</li>
                         <li>Hehhehehhe</li>
                         <li>Hehhehehhe</li>

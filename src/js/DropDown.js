@@ -21,8 +21,8 @@ class DropDown extends Component {
         let visible = this.state.visible;
 
         return (
-            <div onClick={this.handleClick} className="drop-down">
-                <li>{this.props.title}</li>
+            <div className="drop-down">
+                <li className="drop-down-title" onClick={this.handleClick}>{this.props.title}</li>
                 {(visible && this.props.children)}
             </div>
         );

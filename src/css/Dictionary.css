@@ -1,0 +1,26 @@
+h2 {
+    font-size: 24px;
+    padding: 20px;
+}
+li {
+    list-style-type: circle;
+    margin-bottom: 10px;
+    margin-top:10px;
+}
+
+.dictionary{
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 1.5;
+}
+.bold{
+    font-weight: bold;
+}
+.center {
+    text-align: center;
+}
+.italic {
+    font-style:italic;
+}

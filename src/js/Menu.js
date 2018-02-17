@@ -9,16 +9,16 @@ function Menu(props) {
         <div className="menu">
             <Link to='/' className="drop-down-title">START</Link>
             <DropDown title="WIEM">
-                <Link to='/1'>FAKE NEWS (fałszywe wiadomości)</Link>
-                <Link to='/2'>PHISHING (wyłudzanie danych)</Link>
-                <Link to='/3'>ADBLOCK (blokowanie reklam)</Link>
-                <Link to='/4'>Spam</Link>
-                <Link to='/5'>Click baity</Link>
-                <Link to='/6'>Memy</Link>
-                <Link to='/7'>Framing</Link>
-                <Link to='/8'>manipulacje językowe</Link>
-                <Link to='/9'>Fałszywy ekspert</Link>
-                <Link to='/10'>Wybieranie wisienek</Link>
+                <Link to='falszywe-wiadomosci'>FAKE NEWS (fałszywe wiadomości)</Link>
+                <Link to='wyludzanie-danych'>PHISHING (wyłudzanie danych)</Link>
+                <Link to='blokowanie-reklam'>ADBLOCK (blokowanie reklam)</Link>
+                <Link to='spam'>Spam</Link>
+                <Link to='click-baity'>Click baity</Link>
+                <Link to='memy'>Memy</Link>
+                <Link to='framing'>Framing</Link>
+                <Link to='manipulacje-jezykowe'>manipulacje językowe</Link>
+                <Link to='falszywy-ekspert'>Fałszywy ekspert</Link>
+                <Link to='wybieranie-wisienek'>Wybieranie wisienek</Link>
             </DropDown>
             <DropDown title="DZIAŁAM">
                 <Link to='/prawda-albo-falsz'>Prawda albo fałsz</Link>

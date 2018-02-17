@@ -7,6 +7,7 @@ import Home from './Home';
 
 import Tof from '../games/true-or-false/js/Tof';
 import Spam from '../games/spam/js/Spam';
+import Bandit from '../games/one-bandit/js/Bandit';
 
 class App extends Component {
   constructor() {
@@ -30,6 +31,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/prawda-albo-falsz" component={Tof} />
             <Route exact path="/spam" component={Spam} />
+            <Route exact path="/jednoreki" component={Bandit} />
           </div>
         </div>
       </Router>

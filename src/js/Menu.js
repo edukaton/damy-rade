@@ -22,7 +22,7 @@ function Menu(props) {
             </DropDown>
             <DropDown title="DZIAŁAM">
                 <Link to='/prawda-albo-falsz'>Prawda albo fałsz</Link>
-                <Link to='/spam'>SPAM</Link>
+                <Link to='/gra/spam'>SPAM</Link>
                 <Link to='/jednoreki'>Jednoreki bandyta</Link>
                 <Link to='/d4'>4</Link>
                 <Link to='/d5'>5</Link>

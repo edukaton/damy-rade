@@ -40,7 +40,7 @@ class App extends Component {
           <div className="content">
             <Route exact path="/" component={Home} />
             <Route exact path="/prawda-albo-falsz" component={Tof} />
-            <Route exact path="/spam" component={Spam} />
+            <Route exact path="/gra/spam" component={Spam} />
             <Route exact path="/jednoreki" component={Bandit} />
             <Route exact path="/falszywe-wiadomosci" component={FakeNews} />
             <Route exact path="/wyludzanie-danych" component={Phishing} />

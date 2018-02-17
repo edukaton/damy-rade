@@ -8,6 +8,8 @@ class Message extends Component {
         this.state = {
             dropped: false
         };
+
+        this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick() {
@@ -18,12 +20,14 @@ class Message extends Component {
 
     render() {
         let showButtons = !(this.props.markedAsSpam || this.props.markedAsGood);
+        let dropped = this.state.dropped;
         let classes = "message";
+
         this.props.markedAsSpam ? classes += " message-spam" : classes += "";
         this.props.markedAsGood ? classes += " message-good" : classes += "";
 
         return (
-            <div className={classes}>
+            <div className={classes} onClick={this.handleClick}>
                 <h2 className="message-title">{this.props.title}</h2>
                 <span className="message-sender">{this.props.sender}</span>
                 <span className="message-text">{this.props.text}</span>
@@ -33,8 +37,9 @@ class Message extends Component {
                     transitionEnterTimeout={500}
                     transitionLeaveTimeout={300}
                 >
-                    {showButtons && <button className="message-button" onClick={() => this.props.onSpamClick()}>Spam</button>}
-                    {showButtons && <button className="message-button" onClick={() => this.props.onGoodClick()}>Dobra wiadomość</button>}
+                    {dropped && <span className="message-dropped-text">{this.props.text}</span>}
+                    {dropped && showButtons && <button className="message-button" onClick={() => this.props.onSpamClick()}>Spam</button>}
+                    {dropped && showButtons && <button className="message-button" onClick={() => this.props.onGoodClick()}>Dobra wiadomość</button>}
                 </CSSTransitionGroup>
             </div>
         );

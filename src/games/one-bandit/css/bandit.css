@@ -14,6 +14,7 @@
   background: #efefef;
   text-align: center;
   user-select: none;
+  transition: 0.5s;
 }
 
 .bandit-word.changable {
@@ -25,4 +26,34 @@
 .bandit-word.changable::after {
   content: " ↓";
   font-size: 12px;
+}
+
+.bandit-drop {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+
+.bandit-dropped {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-bottom: 0;
+  cursor: pointer;
+}
+
+.bandit-dropped:last-of-type {
+  border-bottom: 1px solid #ddd;
+}
+
+.bandit-word.changable.dropped::after {
+  content: " ↑";
+}
+
+.bandit-drop-box {
+  position: absolute;
+  width: 100%;
+}
+
+.bandit-word.good {
+  color: #7ad308;
 }

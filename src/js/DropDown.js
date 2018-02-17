@@ -24,7 +24,7 @@ class DropDown extends Component {
 
         return (
             <div className="drop-down">
-                <a href="#" className="drop-down-title" onClick={this.handleClick}>{this.props.title}</a>
+                <a title={this.props.srtitle} href="#" className="drop-down-title" onClick={this.handleClick}>{this.props.title}</a>
                 <CSSTransitionGroup
                     transitionName="test"
                     transitionEnterTimeout={500}

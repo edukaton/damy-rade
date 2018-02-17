@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import '../css/bandit.css';
 
 import examples from "./examples";
+import Select from "./Select";
 
 class Bandit extends Component {
   constructor() {
@@ -34,11 +35,11 @@ class Bandit extends Component {
     this.setState({ example: example, words: words, changableIds: changableIds });
   }
 
-  handleChange(id) {
+  handleChange(i, id) {
     let words = this.state.words.concat([]);
-    let word = words[id];
+    let word = words[i];
 
-    word.current = word.current + 1 < word.possibilities.length ? word.current + 1 : 0;
+    word.current = id;
 
     word.text = word.possibilities[word.current].text;
 
@@ -50,7 +51,7 @@ class Bandit extends Component {
   render() {
     const words = this.state.words.map((word, i) => {
       if (word.changable)
-        return <div key={i} onClick={() => this.handleChange(i)} className="bandit-word changable">{word.text}</div>
+        return <Select key={i} onChange={(id) => this.handleChange(i, id)} title={word.text} words={word.possibilities} />
       else
         return <div key={i} className="bandit-word">{word.text}</div>
     });

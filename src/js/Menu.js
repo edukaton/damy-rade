@@ -7,27 +7,27 @@ import DropDown from './DropDown';
 function Menu(props) {
     return (
         <div className="menu">
-            <Link to='/' className="drop-down-title">START</Link>
-            <DropDown title="WIEM">
-                <Link to='falszywe-wiadomosci'>FAKE NEWS</Link>
-                <Link to='wyludzanie-danych'>PHISHING</Link>
-                <Link to='blokowanie-reklam'>ADBLOCK</Link>
-                <Link to='spam'>Spam</Link>
-                <Link to='click-baity'>Click baity</Link>
-                <Link to='memy'>Memy</Link>
-                <Link to='framing'>Framing</Link>
-                <Link to='manipulacje-jezykowe'>manipulacje językowe</Link>
-                <Link to='falszywy-ekspert'>Fałszywy ekspert</Link>
-                <Link to='wybieranie-wisienek'>Wybieranie wisienek</Link>
+            <Link title="Strona główna" to='/' className="drop-down-title">START</Link>
+            <DropDown srtitle="Kliknij, aby rozwinąć zawartość słowniczka" title="WIEM">
+                <Link title="Informacje dotyczące fałszywych wiadomości w internecie" to='/falszywe-wiadomosci'>FAKE NEWS</Link>
+                <Link title="Informacje dotyczące wyłudzeń danych w internecie" to='/wyludzanie-danych'>PHISHING</Link>
+                <Link title="Informacje dotyczące blokowania reklam w internecie" to='/blokowanie-reklam'>ADBLOCK</Link>
+                <Link title="Informacje dotyczące niechcianych wiadomości w internecie" to='/spam'>Spam</Link>
+                <Link title="Informacje dotyczące krzykliwych nagłówków w internecie" to='/click-baity'>Click baity</Link>
+                <Link title="Informacje dotyczące śmiesznych obrazków w internecie" to='/memy'>Memy</Link>
+                <Link title="Informacje dotyczące pomijania informacji w internecie" to='/framing'>Framing</Link>
+                <Link title="Informacje dotyczące manipulowania językiem w internecie" to='/manipulacje-jezykowe'>manipulacje językowe</Link>
+                <Link title="Informacje dotyczące fałszywych ekspertów w internecie" to='/falszywy-ekspert'>Fałszywy ekspert</Link>
+                <Link title="Informacje dotyczące subiektywnych dowodów w internecie" to='/wybieranie-wisienek'>Wybieranie wisienek</Link>
             </DropDown>
-            <DropDown title="DZIAŁAM">
-                <Link to='/prawda-albo-falsz'>Prawda albo fałsz</Link>
-                <Link to='/gra/spam'>SPAM</Link>
-                <Link to='/jednoreki'>Jednoreki bandyta</Link>
-                <Link to='/d4'>4</Link>
-                <Link to='/d5'>5</Link>
+            <DropDown srtitle="Kliknij, aby rozwinąć zawartość zadania praktyczne" title="DZIAŁAM">
+                <Link title="Zadanie praktyczne o fałszywych informacjach i wyłudzeniach danych" to='/prawda-albo-falsz'>Prawda albo fałsz</Link>
+                <Link title="Zadanie praktyczne o niechcianych wiadomości w internecie" to='/gra/spam'>SPAM</Link>
+                <Link title="Zadanie praktyczne o krzykliwych nagłówkach w internecie" to='/jednoreki'>Jednoreki bandyta</Link>
+                <Link title="Zadanie praktyczne o krzykliwych nagłówkach w internecie" to='/gra/ukladanie'>Układanie</Link>
+                <Link title="Zadanie praktyczne o krzykliwych nagłówkach w internecie" to='/d5'>5</Link>
             </DropDown>
-            <Link to="/pamietnik" className="drop-down-title">PAMIĘTAM</Link>
+            <Link title="Miejsce do przygotowania własnych notatek" to="/pamietnik" className="drop-down-title">PAMIĘTAM</Link>
         </div>
     );
 }

@@ -4,6 +4,8 @@ import '../css/App.css';
 
 import Menu from './Menu';
 import Home from './Home';
+
+import Tof from '../games/true-or-false/js/Tof';
 import Spam from '../games/spam/js/Spam';
 
 class App extends Component {
@@ -26,6 +28,7 @@ class App extends Component {
           <Menu />
           <div className="content">
             <Route exact path="/" component={Home} />
+            <Route exact path="/prawda-albo-falsz" component={Tof} />
             <Route exact path="/spam" component={Spam} />
           </div>
         </div>

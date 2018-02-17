@@ -21,8 +21,8 @@ function Menu(props) {
                 <Link to='/10'>10</Link>
             </DropDown>
             <DropDown title="DZIAŁAM">
+                <Link to='/prawda-albo-falsz'>Prawda albo fałsz</Link>
                 <Link to='/spam'>SPAM</Link>
-                <Link to='/d2'>2</Link>
                 <Link to='/d3'>3</Link>
                 <Link to='/d4'>4</Link>
                 <Link to='/d5'>5</Link>

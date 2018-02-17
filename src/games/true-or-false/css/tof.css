@@ -1,0 +1,25 @@
+.tof-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background: #fefefe;
+}
+
+.tof-animation-enter {
+    opacity: 0.01;
+}
+  
+.tof-animation-enter.tof-animation-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+  
+.tof-animation-leave {
+    opacity: 1;
+}
+  
+.tof-animation-leave.tof-animation-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+}

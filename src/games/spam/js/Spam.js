@@ -18,7 +18,7 @@ class Spam extends Component {
   componentWillMount() {
     let i = 0;
 
-    let newMessages = setInterval(() => {
+    this.newMessages = setInterval(() => {
 
       let newMessage = {
         id: i,
@@ -39,8 +39,12 @@ class Spam extends Component {
 
       i = i + 1;
 
-      if (i == 5) clearInterval(newMessages);
+      if (i == 5) clearInterval(this.newMessages);
     }, 3000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.newMessages);
   }
 
   handleSpamClick(id) {

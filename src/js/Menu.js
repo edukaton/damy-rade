@@ -8,7 +8,7 @@ class Menu extends Component {
     render() {
         return (
             <div className="menu">
-                <Link to='/'>START</Link>
+                <Link to='/' className="drop-down-title">START</Link>
                 <DropDown title="WIEM">
                     <Link to='/1'>1</Link>
                     <Link to='/2'>2</Link>

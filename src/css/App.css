@@ -1,5 +1,5 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .page {
@@ -9,6 +9,9 @@ body {
 .menu {
     width: 20%;
     min-height: 100vh;
+}
+.drop-down-title {
+    cursor: pointer;
 }
 
 .content {

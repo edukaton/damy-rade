@@ -22,7 +22,7 @@ class DropDown extends Component {
 
         return (
             <div className="drop-down">
-                <li className="drop-down-title" onClick={this.handleClick}>{this.props.title}</li>
+                <a href="#" className="drop-down-title" onClick={this.handleClick}>{this.props.title}</a>
                 {(visible && this.props.children)}
             </div>
         );

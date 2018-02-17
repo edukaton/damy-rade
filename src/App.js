@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './App.css';
 
-import Home from "./Home";
+import Menu from './Menu';
+import Home from './Home';
+
 
 class App extends Component {
   constructor() {
@@ -21,7 +23,10 @@ class App extends Component {
     return (
       <Router>
         <div className="page">
-          <Route exact path="/" component={Home} />
+          <Menu />
+          <div className="content">
+            <Route exact path="/" component={Home} />
+          </div>
         </div>
       </Router>
     );

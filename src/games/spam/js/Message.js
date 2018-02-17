@@ -11,8 +11,8 @@ function Message(props) {
         <div className={classes}>
             <h2 className="message-title">{props.title}</h2>
             <span className="message-sender">{props.sender}</span>
+            <span className="message-text">{props.text}</span>
             <span className="message-date">{props.date}</span>
-            <p className="message-text">{props.text}</p>
             <CSSTransitionGroup
                 transitionName="animation"
                 transitionEnterTimeout={500}

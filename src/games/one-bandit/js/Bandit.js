@@ -3,76 +3,7 @@ import React, { Component } from 'react';
 //import { CSSTransitionGroup }  from 'react-transition-group';
 import '../css/bandit.css';
 
-const examples = [
-  [
-    {
-      text: "Co za cyrk na",
-      changable: true,
-      current: 0,
-      possibilities: [
-        {
-          text: "Co za cyrk na",
-          good: false
-        },
-        {
-          text: "Skandal na",
-          good: false
-        },
-        {
-          text: "Zdrada w",
-          good: false
-        },
-        {
-          text: "Aktualne posiedzenie",
-          good: true
-        },
-        {
-          text: "Farsa z",
-          good: false
-        },
-        {
-          text: "Szarpanina",
-          good: false
-        },
-      ]
-    },
-    {
-      text: "komisji!",
-      changable: false
-    },
-    {
-      text: "Zobacz",
-      changable: true,
-      current: 0,
-      possibilities: [
-        {
-          text: "Zobacz",
-          good: false,
-        },
-        {
-          text: "Skandaliczne",
-          good: false
-        },
-        {
-          text: "Dostępne",
-          good: true,
-        },
-        {
-          text: "Mamy",
-          good: false,
-        },
-        {
-          text: "Szokujące",
-          good: false,
-        }
-      ]
-    },
-    {
-      text: "video!",
-      changable: false
-    }
-  ],
-]
+import examples from "./examples";
 
 class Bandit extends Component {
   constructor() {
@@ -86,7 +17,7 @@ class Bandit extends Component {
   }
 
   componentWillMount() {
-    const example = Math.floor(Math.random() * 1);
+    const example = Math.floor(Math.random() * examples.length);
 
     const currentExample = examples[example];
 

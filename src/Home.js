@@ -7,18 +7,7 @@ class Home extends Component {
     render() {
         return (
             <div className="home">
-
-                <div className="content">
-                    <div className="header">
-
-                    </div>
-                    <div className="theory">
-                    </div>
-                    <div className="practice">
-                    </div>
-                    <div className="footer">
-                    </div>
-                </div>
+                <h1>Strona główna</h1>
             </div>
         );
     }

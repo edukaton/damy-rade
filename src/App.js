@@ -5,7 +5,6 @@ import './App.css';
 import Menu from './Menu';
 import Home from './Home';
 
-
 class App extends Component {
   constructor() {
     super();

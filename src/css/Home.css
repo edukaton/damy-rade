@@ -4,10 +4,15 @@
     text-align: center;
 }
 h1 {
-    display: inline-block;
+ 
 }
-.direction {
-    font-size:3em; 
-    color:Tomato;
-    display: inline-block;
+.bold {
+    font-weight: bold;
+}
+.navnextt {
+
+    color:black;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
 }

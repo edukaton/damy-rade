@@ -6,10 +6,10 @@ function Phishing(props) {
     return (
         <div className="dictionary">
             <div className="navback">
-            <Link title="Informacje dotyczące fałszywych wiadomości w internecie" to='/falszywe-wiadomosci'><div className="direction"><i class="fas fa-caret-square-left"></i> Wróć do Fake news</div></Link>
+            <Link title="Informacje dotyczące fałszywych wiadomości w internecie" to='/falszywe-wiadomosci'><div className="direction"><i className="fa fa-caret-square-o-left"></i> Wróć do Fake news</div></Link>
             </div>
         <div className="navnext">
-            <Link title="Informacje dotyczące blokowania reklam w internecie" to='/blokowanie-reklam'> <div className="direction">Przejdź do Adblock <i class="fas fa-caret-square-right"></i></div></Link>
+            <Link title="Informacje dotyczące blokowania reklam w internecie" to='/blokowanie-reklam'> <div className="direction">Przejdź do Adblock <i className="fa fa-caret-square-o-right"></i></div></Link>
         </div>
             <h1 className="dictionary-title">PHISHING (wyłudzanie danych)</h1>
             <p className="dictionary-p">
@@ -19,10 +19,10 @@ function Phishing(props) {
                 <img src={require('./img/mziarek_pishing_07.jpg')}/>
                 <img src={require('./img/phishing-youtube2.jpg')}/> 
             <div className="navback">
-            <Link title="Informacje dotyczące fałszywych wiadomości w internecie" to='/falszywe-wiadomosci'><div className="direction"><i class="fas fa-caret-square-left"></i> Wróć do Fake news</div></Link>
+            <Link title="Informacje dotyczące fałszywych wiadomości w internecie" to='/falszywe-wiadomosci'><div className="direction"><i className="fa fa-caret-square-o-left"></i> Wróć do Fake news</div></Link>
             </div>
             <div className="navnext">
-            <Link title="Informacje dotyczące blokowania reklam w internecie" to='/blokowanie-reklam'> <div className="direction">Przejdź do Adblock<i class="fas fa-caret-square-right"></i></div></Link>
+            <Link title="Informacje dotyczące blokowania reklam w internecie" to='/blokowanie-reklam'> <div className="direction">Przejdź do Adblock<i className="fa fa-caret-square-o-right"></i></div></Link>
             </div>   
         </div>
     );

@@ -10,10 +10,10 @@ function Manipulation(props) {
         */
         <div className="dictionary">
             <div className="navback">
-            <Link title="Informacje dotyczące pomijania informacji w internecie" to='/framing'><div className="direction"><i class="fas fa-caret-square-left"></i> Wróć do Framing</div></Link>
+            <Link title="Informacje dotyczące pomijania informacji w internecie" to='/framing'><div className="direction"><i className="fa fa-caret-square-o-left"></i> Wróć do Framing</div></Link>
             </div>
             <div className="navnext">
-            <Link title="Informacje dotyczące fałszywych ekspertów w internecie" to='/falszywy-ekspert'><div className="direction">Przejdź do Fałszywy ekspert <i class="fas fa-caret-square-right"></i></div></Link>
+            <Link title="Informacje dotyczące fałszywych ekspertów w internecie" to='/falszywy-ekspert'><div className="direction">Przejdź do Fałszywy ekspert <i className="fa fa-caret-square-o-right"></i></div></Link>
             </div>
             <h1 className="dictionary-title">Manipulacje językowe</h1>
             <p className="dictionary-p">
@@ -24,10 +24,10 @@ function Manipulation(props) {
             “Co za żenada. Norwegowie chcieli upokorzyć Stocha – odgryzł się z klasą”</span></p>
             <img src={require('./img/tvp.PNG')}/>
             <div className="navback">
-            <Link title="Informacje dotyczące pomijania informacji w internecie" to='/framing'><div className="direction"><i class="fas fa-caret-square-left"></i> Wróć do Framing</div></Link>
+            <Link title="Informacje dotyczące pomijania informacji w internecie" to='/framing'><div className="direction"><i className="fa fa-caret-square-o-left"></i> Wróć do Framing</div></Link>
             </div>
             <div className="navnext">
-            <Link title="Informacje dotyczące fałszywych ekspertów w internecie" to='/falszywy-ekspert'><div className="direction">Przejdź do Fałszywy ekspert <i class="fas fa-caret-square-right"></i></div></Link>
+            <Link title="Informacje dotyczące fałszywych ekspertów w internecie" to='/falszywy-ekspert'><div className="direction">Przejdź do Fałszywy ekspert <i className="fa fa-caret-square-o-right"></i></div></Link>
             </div>
         </div>
     );

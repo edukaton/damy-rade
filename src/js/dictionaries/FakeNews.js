@@ -6,10 +6,10 @@ function FakeNews(props) {
     return (
         <div className="dictionary">
             <div className="navback">
-                <Link title="Strona główna" to='/'><div className="direction"><i class="fas fa-caret-square-left"></i> Wróć do Start</div></Link>
+                <Link title="Strona główna" to='/'><div className="direction"><i className="fa fa-caret-square-o-left"></i> Wróć do Start</div></Link>
             </div>
             <div className="navnext">
-                <Link title="Informacje dotyczące wyłudzeń danych w internecie" to='/wyludzanie-danych'><div className="direction">Przejdź do Phishing <i class="fas fa-caret-square-right"></i></div></Link>
+                <Link title="Informacje dotyczące wyłudzeń danych w internecie" to='/wyludzanie-danych'><div className="direction">Przejdź do Phishing <i className="fa fa-caret-square-o-right"></i></div></Link>
             </div>
             <h1 className="dictionary-title">FAKE NEWS (fałszywe wiadomości)</h1>
             <p className="dictionary-p">
@@ -31,10 +31,10 @@ function FakeNews(props) {
             <img className="dictionary-image" />
             
             <div className="navback">
-                <Link title="Strona główna" to='/'><div className="direction"><i class="fas fa-caret-square-left"></i> Wróć do Start</div></Link>
+                <Link title="Strona główna" to='/'><div className="direction"><i className="fa fa-caret-square-o-left"></i> Wróć do Start</div></Link>
             </div>
             <div className="navnext">
-                <Link title="Informacje dotyczące wyłudzeń danych w internecie" to='/wyludzanie-danych'><div className="direction">Przejdź do Phishing <i class="fas fa-caret-square-right"></i></div></Link>
+                <Link title="Informacje dotyczące wyłudzeń danych w internecie" to='/wyludzanie-danych'><div className="direction">Przejdź do Phishing <i className="fa fa-caret-square-o-right"></i></div></Link>
             </div>
         </div>
     );

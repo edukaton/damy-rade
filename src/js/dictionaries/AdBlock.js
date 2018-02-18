@@ -6,10 +6,10 @@ function AdBlock(props) {
     return (
         <div className="dictionary">
             <div className="navback">
-                <Link title="Informacje dotyczące wyłudzeń danych w internecie" to='/wyludzanie-danych'><div className="direction"><i class="fas fa-caret-square-left"></i> Wróć do phishing</div></Link>
+                <Link title="Informacje dotyczące wyłudzeń danych w internecie" to='/wyludzanie-danych'><div className="direction"><i className="fa fa-caret-square-o-left"></i> Wróć do phishing</div></Link>
             </div>
             <div className="navnext">
-                <Link title="Informacje dotyczące niechcianych wiadomości w internecie" to='/spam'><div className="direction">Przejdź do Spam <i class="fas fa-caret-square-right"></i></div></Link>
+                <Link title="Informacje dotyczące niechcianych wiadomości w internecie" to='/spam'><div className="direction">Przejdź do Spam <i className="fa fa-caret-square-o-right"></i></div></Link>
             </div>
         <h1 className="dictionary-title">ADBLOCK (blokowanie reklam)</h1>
         
@@ -24,10 +24,10 @@ function AdBlock(props) {
             <img src={require('./img/139906.png')}/>
            
             <div className="navback">
-                <Link title="Informacje dotyczące wyłudzeń danych w internecie" to='/wyludzanie-danych'><div className="direction"><i class="fas fa-caret-square-left"></i> Wróć do phishing</div></Link>
+                <Link title="Informacje dotyczące wyłudzeń danych w internecie" to='/wyludzanie-danych'><div className="direction"><i className="fa fa-caret-square-o-left"></i> Wróć do phishing</div></Link>
             </div>
             <div className="navnext">
-                <Link title="Informacje dotyczące niechcianych wiadomości w internecie" to='/spam'><div className="direction">Przejdź do Spam <i class="fas fa-caret-square-right"></i></div></Link>
+                <Link title="Informacje dotyczące niechcianych wiadomości w internecie" to='/spam'><div className="direction">Przejdź do Spam <i className="fa fa-caret-square-o-right"></i></div></Link>
             </div>
         </div>
     );

@@ -3,6 +3,10 @@ import '../../css/Dictionary.css';
 
 function Phishing(props) {
     return (
+        /*
+        -<Link title="Informacje dotyczące fałszywych wiadomości w internecie" to='/falszywe-wiadomosci'>Fake news</Link>
+        +<Link title="Informacje dotyczące blokowania reklam w internecie" to='/blokowanie-reklam'>Adblock</Link>
+        */
         <div className="dictionary">
             <h1 className="dictionary-title">PHISHING (wyłudzanie danych)</h1>
             <p className="dictionary-p">

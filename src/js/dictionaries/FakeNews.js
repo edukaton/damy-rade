@@ -3,6 +3,10 @@ import '../../css/Dictionary.css';
 
 function FakeNews(props) {
     return (
+        /*
+            -<Link title="Strona główna" to='/' className="drop-down-title">START</Link>
+            +<Link title="Informacje dotyczące wyłudzeń danych w internecie" to='/wyludzanie-danych'>Phishing</Link>
+            */
         <div className="dictionary">
             <h1 className="dictionary-title">FAKE NEWS (fałszywe wiadomości)</h1>
             <p className="dictionary-p">

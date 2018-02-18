@@ -86,6 +86,11 @@ class Spam extends Component {
     });
 
     return (
+      /*
+      -<Link title="Zadanie praktyczne o fałszywych informacjach i wyłudzeniach danych" to='/prawda-albo-falsz'>Prawda albo fałsz</Link>
+      +<Link title="Zadanie praktyczne o krzykliwych nagłówkach w internecie" to='/jednoreki'>Jednoreki bandyta</Link>
+      +
+      */
       <div className="spam-game">
         <header className="header">
           <h1 className="title">Skrzynka pocztowa</h1>

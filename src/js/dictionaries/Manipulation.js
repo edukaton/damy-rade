@@ -3,6 +3,10 @@ import '../../css/Dictionary.css';
 
 function Manipulation(props) {
     return (
+        /*
+        -<Link title="Informacje dotyczące pomijania informacji w internecie" to='/framing'>Framing</Link>
+        +<Link title="Informacje dotyczące fałszywych ekspertów w internecie" to='/falszywy-ekspert'>Fałszywy ekspert</Link>
+        */
         <div className="dictionary">
             <h1 className="dictionary-title">Manipulacje językowe</h1>
             <p className="dictionary-p">

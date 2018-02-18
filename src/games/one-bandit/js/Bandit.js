@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 
 //import { CSSTransitionGroup }  from 'react-transition-group';
+
+/*
+-<Link title="Zadanie praktyczne o niechcianych wiadomości w internecie" to='/gra/spam'>Spam</Link>
++<Link title="Zadanie praktyczne o krzykliwych nagłówkach w internecie" to='/gra/ukladanie'>Układanie</Link>
+*/
 import '../css/bandit.css';
 
 import examples from "./examples";

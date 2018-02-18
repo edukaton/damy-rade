@@ -24,3 +24,8 @@ li {
 .italic {
     font-style:italic;
 }
+img {
+    display: block;
+    margin: auto;
+    width: 100%;
+}

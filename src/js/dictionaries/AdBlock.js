@@ -3,6 +3,10 @@ import '../../css/Dictionary.css';
 
 function AdBlock(props) {
     return (
+        /*
+        -<Link title="Informacje dotyczące wyłudzeń danych w internecie" to='/wyludzanie-danych'>Phishing</Link>
+        +<Link title="Informacje dotyczące niechcianych wiadomości w internecie" to='/spam'>Spam</Link>
+        */
         <div className="dictionary">
             <h1 className="dictionary-title">ADBLOCK (blokowanie reklam)</h1>
             <p className="dictionary-p"><span className="bold">ADBLOCK (blokowanie reklam), [adblok]:</span> wtyczka dla przeglądarek internetowych która umożliwia blokowanie wyświetlania internetowych reklam. Rozszerzenie nie tyle filtruje załadowaną wcześniej treść, ale w ogóle nie ściąga reklam, co przyczynia się do ograniczenia ruchu w sieci.<br />

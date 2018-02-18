@@ -69,6 +69,10 @@ class Tof extends Component {
             let question = <h2>{this.state.questions[currentQuestion].text}</h2>;
 
             return (
+                /*
+                -<Link title="Informacje dotyczące subiektywnych dowodów w internecie" to='/wybieranie-wisienek'>Wybieranie wisienek</Link>
+                +<Link title="Zadanie praktyczne o niechcianych wiadomości w internecie" to='/gra/spam'>Spam</Link>
+                */
                 <div className="tof-game">
                     <header className="header">
                         <h1 className="title">Czy to zdanie jest prawdziwe?</h1>

@@ -3,6 +3,10 @@ import '../../css/Dictionary.css';
 
 function Cherry(props) {
     return (
+        /*
+        -<Link title="Informacje dotyczące fałszywych ekspertów w internecie" to='/falszywy-ekspert'>Fałszywy ekspert</Link>
+        +<Link title="Zadanie praktyczne o fałszywych informacjach i wyłudzeniach danych" to='/prawda-albo-falsz'>Prawda albo fałsz</Link>
+        */
         <div className="dictionary">
             <h1 className="dictionary-title">Wybieranie wisienek</h1>
             <p className="dictionary-p">Autorzy “wisienek” wychodzą z założenia, że każdą teorię można udowodnić odpowiednio dobierając dane.

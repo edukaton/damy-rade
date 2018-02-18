@@ -5,3 +5,45 @@
     height: 100vh;
     background: #fefefe;
 }
+
+.arrange-places {
+    margin: 0 0 10px;
+}
+
+.arrange-place {
+    display: inline-block;
+    text-align: center;
+    user-select: none;
+    transition: 0.5s;
+    font-size: 20px;
+    height: 20px;
+    padding: 0 10px 0;
+    vertical-align: bottom; 
+}
+
+.arrange-place.changable {
+    border-bottom: 1px solid #444;
+    min-width: 100px;
+}
+
+.arrange-place.selecting {
+    cursor: pointer;
+    background: rgba(0, 255, 0, 0.4);
+}
+
+.arrange-word {
+    display: inline-block;
+    border: 1px solid #444;
+    border-right: 0;
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.arrange-word:last-of-type {
+    border-right: 1px solid #444;
+}
+
+.arrange-word.selected {
+    background: #ddd;
+}

@@ -106,7 +106,9 @@ class Spam extends Component {
           <h1 className="title">Skrzynka pocztowa</h1>
         </header>
         <div className="instruction">
-                INSTRUKCJA: Kliknij w odpowiednie słowo, a potem kliknij w pole (lukę) w zdaniu, gdzie chcesz to słowo umieścić. Jeśli chcesz usunąć słowo, kliknij przycisk COFNIJ.
+                INSTRUKCJA: Sprawdź czy odróżniasz SPAM od innych wiadomości.
+Co 3 sekundy będzie pojawiała się nowa wiadomość e-mail. Kliknij w nią, a następnie oceń czy jest SPAMem czy zwykłą wiadomością do Ciebie.
+  
         </div>
         <div className="messages">
           <CSSTransitionGroup

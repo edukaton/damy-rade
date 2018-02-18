@@ -120,10 +120,10 @@ class Tof extends Component {
             console.log(this.state)
     
             if (answered && goodAnswer) {
-                result = <div className="tof-result tof-result-good"><span>Dobra odpowiedź</span><i className="fa fa-check"></i><button onClick={this.handleNextQuestionClick}>Następne pytanie</button></div>
+                result = <div className="tof-result tof-result-good"><span>Dobra odpowiedź</span><i className="fa fa-check"></i><button className="button"onClick={this.handleNextQuestionClick}>Następne pytanie</button></div>
             }
             else if (answered) {
-                result = <div className="tof-result tof-result-bad"><span>Nieprawidłowa odpowiedź</span><i className="fa fa-times"></i><button onClick={this.handleNextQuestionClick}>Następne pytanie</button></div>
+                result = <div className="tof-result tof-result-bad"><span>Nieprawidłowa odpowiedź</span><i className="fa fa-times"></i><button className="button" onClick={this.handleNextQuestionClick}>Następne pytanie</button></div>
             }
     
             return (
@@ -147,14 +147,14 @@ class Tof extends Component {
         }
         else {
             return (
-            <div>
-                <h2>Koniec pytań</h2>
+            <div className="end">
                 <div className="navback">
                  <Link title="Informacje dotyczące subiektywnych dowodów w internecie" to='/wybieranie-wisienek'><div className="direction"><i className="fa fa-caret-square-o-left"></i> Wróć do poprzedniego hasła</div></Link>
             </div>
             <div className="navnext">
-            <Link title="Zadanie praktyczne o niechcianych wiadomości w internecie" to='/gra/spam'><div className="direction">Przejdź do następnego zadania  <i className="fa fa-caret-square-o-right"></i></div></Link>
-            </div>   
+            <Link title="Zadanie praktyczne o niechcianych wiadomości w internecie" to='/gra/spam'><div className="direction">Przejdź do następnego zadania <i className="fa fa-caret-square-o-right"></i></div></Link>
+            </div>  
+            <h2 className="ending">Koniec pytań</h2>
             </div>
             );
         }

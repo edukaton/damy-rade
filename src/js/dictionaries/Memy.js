@@ -14,9 +14,9 @@ function Memy(props) {
             </div>
             <h1 className="dictionary-title bold">Memy</h1>
             <p className="dictionary-p"><span className="bold">Memy</span> obrazki o charakterze humorystycznym, w których elementy graficzne współwystępują z elementami tekstowymi. - obrazki o charakterze humorystycznym, w których elementy graficzne współwystępują z elementami tekstowymi.
-            <img src={require('./img/mem1.jpg')}/>
-            <img src={require('./img/mem2.jpg')}/>
-            <img src={require('./img/mem3.jpg')}/>
+            <img src={require('./img/mem1.jpg')}  alt="obrazek"/>
+            <img src={require('./img/mem2.jpg')}  alt="obrazek"/>
+            <img src={require('./img/mem3.jpg')}  alt="obrazek"/>
             </p>
             <div className="navback">
                 <Link title="Informacje dotyczące krzykliwych nagłówków w internecie" to='/click-baity'><div className="direction"><i className="fa fa-caret-square-o-left"></i> Wróć do poprzedniego hasła</div></Link>

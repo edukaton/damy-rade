@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/tof.css';
 
 function Question(props) {
     const image = props.image;
@@ -9,9 +10,9 @@ function Question(props) {
     let buttons;
 
     if (trueOrFalse)
-        buttons = <div className="tof-question-buttons"><button onClick={props.onTrueClick}>Prawda</button><button onClick={props.onFalseClick}>Fałsz</button></div>;
+        buttons = <div className="tof-question-buttons"><button className="button" onClick={props.onTrueClick}>Prawda</button><button className="button" onClick={props.onFalseClick}>Fałsz</button></div>;
     else
-        buttons = <div className="tof-question-buttons"><button onClick={props.onTrueClick}>Tak</button><button onClick={props.onFalseClick}>Nie</button></div>;
+        buttons = <div className="tof-question-buttons"><button className="button" onClick={props.onTrueClick}>Tak</button><button className="button" onClick={props.onFalseClick}>Nie</button></div>;
 
     return (
         <div className="tof-question">

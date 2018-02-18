@@ -28,7 +28,7 @@ function FakeNews(props) {
             <li><a href="https://biznes.newseria.pl/files/raport-fake-news-newseria.pdf" target="blank">Jak kłamstwo rządzi światem</a></li>
 
             <h2 className="dictionary-subtitle"></h2>
-            <img className="dictionary-image" />
+            
             </p>
             <div className="navback">
                 <Link title="Strona główna" to='/'><div className="direction"><i className="fa fa-caret-square-o-left"></i> Wróć do strony głównej</div></Link>

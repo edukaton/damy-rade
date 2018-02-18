@@ -21,7 +21,7 @@ function Manipulation(props) {
             <span className="italic">„Unijna procedura przeciwko Polsce to także próba zmuszenia nas do przyjęcia islamskich imigrantów”<br />
             "Kot prezesa twardo stawił czoła opozycji"<br />
             “Co za żenada. Norwegowie chcieli upokorzyć Stocha – odgryzł się z klasą”</span></p>
-            <img src={require('./img/tvp.PNG')}/></p>
+            <img src={require('./img/tvp.PNG')}  alt="obrazek"/></p>
             <div className="navback">
             <Link title="Informacje dotyczące pomijania informacji w internecie" to='/framing'><div className="direction"><i className="fa fa-caret-square-o-left"></i> Wróć do poprzedniego hasła </div></Link>
             </div>

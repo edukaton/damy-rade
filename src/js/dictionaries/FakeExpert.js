@@ -14,7 +14,7 @@ function FakeExpert(props) {
             <h1 className="dictionary-title bold">Fałszywy ekspert</h1>
             <p className="dictionary-p"><span className="bold">Fałszywy ekspert</span> to Wypowiedź osoby, która podaje się za eksperta lub powołuje na rekomendacje instytucji, która tak naprawdę nie istnieje  Z pozoru informacje mogą wydać Ci się wiarygodne, ale warto  sprawdzić  czy taki specjalista i  taka instytucja  istnieje i jaką ma renomę.  Nie należy wierzyć w pojedyncze badania. Szukaj dodatkowych analiz niezależnych podmiotów o ugruntowanej międzynarodowej pozycji.<br/>
             Fałszywy ekspert: pedagog szkolny reklamuje suplement diety
-            <img src={require('./img/aflo.PNG')}/><br/>
+            <img src={require('./img/aflo.PNG')} alt="obrazek"/><br/>
             <a href="http://progressment.pl/moc-autorytetu/">Obejrzyj</a>
 
             <h2 className="bold center">Przykład:</h2>

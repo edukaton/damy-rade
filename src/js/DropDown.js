@@ -24,14 +24,14 @@ class DropDown extends Component {
 
         return (
             <div className="drop-down">
-                <a title={this.props.srtitle} href="#" className="drop-down-title" onClick={this.handleClick}>{this.props.title}</a>
+                <a title={this.props.srtitle} href="#" className="drop-down-title" onClick={this.handleClick}>{this.props.title} <i className="fa fa-chevron-down"></i></a>
                 <CSSTransitionGroup
                     transitionName="test"
                     transitionEnterTimeout={500}
                     transitionLeaveTimeout={300}
                 >
                     {(visible &&
-                        <div className="drop-down-content">{this.props.children}</div>
+                        <div className="drop-down-content">{this.props.children} </div>
                     )}
                 </CSSTransitionGroup>
             </div>

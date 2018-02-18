@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
-
-//import { CSSTransitionGroup }  from 'react-transition-group';
-
-/*
--<Link title="Zadanie praktyczne o niechcianych wiadomości w internecie" to='/gra/spam'>Spam</Link>
-+<Link title="Zadanie praktyczne o krzykliwych nagłówkach w internecie" to='/gra/ukladanie'>Układanie</Link>
-*/
 import '../css/bandit.css';
+import { Link } from "react-router-dom";
 
 import examples from "./examples";
 import Select from "./Select";
@@ -78,14 +72,29 @@ class Bandit extends Component {
       if (goodArray[i] == false)
         isGood = false;
     }
-
     return (
+      <div className="container">
+      <div className="navall">
+        <div className="navback">
+<Link title="Zadanie praktyczne o niechcianych wiadomości w internecie" to='/gra/spam'><div className="direction"><i className="fa fa-caret-square-o-left"></i> Wróć do poprzedniego zadania</div></Link>
+      </div>
+      <div className="navnext">
+      <Link title="Zadanie praktyczne o krzykliwych nagłówkach w internecie" to='/gra/ukladanie'><div className="direction">Przejdź do nastęnego zadania <i className="fa fa-caret-square-o-right"></i></div></Link>
+      </div>
+      </div>
+      <header className="header">
+          <h1 className="title">Kasyno wiedzy</h1>
+        </header>
+      <div className="instruction">
+                INSTRUKCJA: W zdaniu możesz pozmieniać pewne wyrazy. Naciśnij przycisk strzałki w dół, aby rozwinąć listę z podpowiedziami.  Zadanie będzie wykonane prawidłowo, gdy ułożone przez Ciebie zdanie będzie rzetelną informacją, pozbawioną manipulacji. 
+            </div>
       <div className="bandit-game">
         <div className="bandit-words">
           {words}
         </div>
         {isGood && <div>Jest ok</div>}
       </div>
+  </div>  
     );
   }
 }

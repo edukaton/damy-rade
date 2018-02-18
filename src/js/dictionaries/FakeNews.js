@@ -6,16 +6,16 @@ function FakeNews(props) {
     return (
         <div className="dictionary">
             <div className="navback">
-                <Link title="Strona główna" to='/'><div className="direction"><i className="fa fa-caret-square-o-left"></i> Wróć do Start</div></Link>
+                <Link title="Strona główna" to='/'><div className="direction"><i className="fa fa-caret-square-o-left"></i> Wróć do strony głównej</div></Link>
             </div>
             <div className="navnext">
-                <Link title="Informacje dotyczące wyłudzeń danych w internecie" to='/wyludzanie-danych'><div className="direction">Przejdź do Phishing <i className="fa fa-caret-square-o-right"></i></div></Link>
+                <Link title="Informacje dotyczące wyłudzeń danych w internecie" to='/wyludzanie-danych'><div className="direction">Przejdź do następnego hasła <i className="fa fa-caret-square-o-right"></i></div></Link>
             </div>
-            <h1 className="dictionary-title">FAKE NEWS (fałszywe wiadomości)</h1>
+            <h1 className="dictionary-title bold">Fake news | (fałszywe wiadomości) | [fejk nius]</h1>
             <p className="dictionary-p">
             
-            <span className="bold">FAKE NEWS (fałszywe wiadomości), [fejk nius]: </span>
-                 forma przekazywania informacji, która opiera się na celowej dezinformacji.Za pomocą mediów elektronicznych czy serwisów społecznościowych mogą być rozprzestrzeniane szybciej i w niespotykanej dotąd ilości. Fake newsy powstają, aby wprowadzić Cię w błąd, najczęściej w celu uzyskania finansowych lub politycznych korzyści.</p>
+            <span className="bold">Fake news | (fałszywe wiadomości) | [fejk nius] </span>
+                 forma przekazywania informacji, która opiera się na celowej dezinformacji.Za pomocą mediów elektronicznych czy serwisów społecznościowych mogą być rozprzestrzeniane szybciej i w niespotykanej dotąd ilości. Fake newsy powstają, aby wprowadzić Cię w błąd, najczęściej w celu uzyskania finansowych lub politycznych korzyści.
             <h2 className="center bold">PRZYKŁADY:</h2>
             <p><span className="bold">Fake news: Papież Franciszek poparł Donalda Trumpa przed wyborami w USA</span><br />
             <span className="italic">A jak było naprawdę?</span><br /> Papież Franciszek przed wyborami prezydenckimi w USA powiedział jedynie, że "podczas kampanii wyborczej nigdy nic nie mówi". - Lud jest suwerenem, a tylko powiem: trzeba dobrze badać propozycje, modlić się i wybierać w sumieniu.</p>  
@@ -29,12 +29,12 @@ function FakeNews(props) {
 
             <h2 className="dictionary-subtitle"></h2>
             <img className="dictionary-image" />
-            
+            </p>
             <div className="navback">
-                <Link title="Strona główna" to='/'><div className="direction"><i className="fa fa-caret-square-o-left"></i> Wróć do Start</div></Link>
+                <Link title="Strona główna" to='/'><div className="direction"><i className="fa fa-caret-square-o-left"></i> Wróć do strony głównej</div></Link>
             </div>
             <div className="navnext">
-                <Link title="Informacje dotyczące wyłudzeń danych w internecie" to='/wyludzanie-danych'><div className="direction">Przejdź do Phishing <i className="fa fa-caret-square-o-right"></i></div></Link>
+                <Link title="Informacje dotyczące wyłudzeń danych w internecie" to='/wyludzanie-danych'><div className="direction">Przejdź do następnego hasła <i className="fa fa-caret-square-o-right"></i></div></Link>
             </div>
         </div>
     );

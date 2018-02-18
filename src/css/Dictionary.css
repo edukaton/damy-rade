@@ -1,5 +1,5 @@
 h2 {
-    font-size: 24px;
+    font-size: 30px;
     padding: 20px;
 }
 li {
@@ -15,6 +15,9 @@ li {
     text-align: justify;
     line-height: 1.5;
 }
+.dictionary-p{
+    font-size: 24px;
+}
 .bold{
     font-weight: bold;
 }
@@ -27,18 +30,12 @@ li {
 img {
     display: block;
     margin: auto;
-    width: 100%;
-}
-.direction {
-    font-size:1.7em; 
-    color: black;
-    display: inline-block;
+    width: 50%;
 }
 .dictionary-title {
     text-align: center;
     margin: 0 auto;
-    display: block;
-    
+    display: block;  
 }
 .navnext {
     float:right;
@@ -47,4 +44,8 @@ img {
 .navback {
     display: inline-block;
 }
-
+.direction {
+    font-size:1.7em; 
+    color: black;
+    display: inline-block;
+}

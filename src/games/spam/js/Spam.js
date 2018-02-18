@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Message from './Message';
 import { CSSTransitionGroup } from 'react-transition-group';
 import '../css/spam.css';
+import { Link } from "react-router-dom";
 
 class Spam extends Component {
   constructor() {
@@ -91,10 +92,22 @@ class Spam extends Component {
       +<Link title="Zadanie praktyczne o krzykliwych nagłówkach w internecie" to='/jednoreki'>Jednoreki bandyta</Link>
       +
       */
+     <div className="container">
+     <div className="navall">
+        <div className="navback">
+        <Link title="Zadanie praktyczne o fałszywych informacjach i wyłudzeniach danych" to='/prawda-albo-falsz'><div className="direction"><i className="fa fa-caret-square-o-left"></i> Wróć do poprzedniego zadania</div></Link>
+      </div>
+      <div className="navnext">
+      <Link title="Zadanie praktyczne o krzykliwych nagłówkach w internecie" to='/jednoreki'><div className="direction">Przejdź do nastęnego zadania <i className="fa fa-caret-square-o-right"></i></div></Link>
+      </div>
+      </div>
       <div className="spam-game">
         <header className="header">
           <h1 className="title">Skrzynka pocztowa</h1>
         </header>
+        <div className="instruction">
+                INSTRUKCJA: Kliknij w odpowiednie słowo, a potem kliknij w pole (lukę) w zdaniu, gdzie chcesz to słowo umieścić. Jeśli chcesz usunąć słowo, kliknij przycisk COFNIJ.
+        </div>
         <div className="messages">
           <CSSTransitionGroup
             transitionName="animation"
@@ -103,6 +116,15 @@ class Spam extends Component {
             {messages}
           </CSSTransitionGroup>
         </div>
+      </div>
+      <div className="navall">
+        <div className="navback">
+        <Link title="Zadanie praktyczne o fałszywych informacjach i wyłudzeniach danych" to='/prawda-albo-falsz'><div className="direction"><i className="fa fa-caret-square-o-left"></i> Wróć do poprzedniego zadania</div></Link>
+      </div>
+      <div className="navnext">
+      <Link title="Zadanie praktyczne o krzykliwych nagłówkach w internecie" to='/jednoreki'><div className="direction">Przejdź do nastęnego zadania <i className="fa fa-caret-square-o-right"></i></div></Link>
+      </div>
+      </div>
       </div>
     );
   }

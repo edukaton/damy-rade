@@ -17,13 +17,13 @@
     transition: 0.5s;
     font-size: 20px;
     height: 20px;
-    padding: 0 10px 0;
-    vertical-align: bottom; 
+    vertical-align: bottom;
+    margin: 0 10px; 
 }
 
 .arrange-place.changable {
     border-bottom: 1px solid #444;
-    min-width: 100px;
+    min-width: 150px;
 }
 
 .arrange-place.selecting {
@@ -46,4 +46,23 @@
 
 .arrange-word.selected {
     background: #ddd;
+}
+
+.arrange-done {
+    font-size: 30px;
+    user-select: none;
+}
+
+.arrange-done i {
+    font-size: 100px;
+    margin: 0 auto;
+    vertical-align: middle;
+}
+
+.arrange-wrong i {
+    color: red;
+}
+
+.arrange-ok i {
+    color: green;
 }

@@ -22,9 +22,11 @@ class DropDown extends Component {
     render() {
         let visible = this.state.visible;
 
+        let i = visible ? <i className="fa fa-chevron-up"></i> : <i className="fa fa-chevron-down"></i>
+
         return (
             <div className="drop-down">
-                <a title={this.props.srtitle} href="#" className="drop-down-title" onClick={this.handleClick}>{this.props.title} <i className="fa fa-chevron-down"></i></a>
+                <a title={this.props.srtitle} href="#" className="drop-down-title" onClick={this.handleClick}>{this.props.title} {i}</a>
                 <CSSTransitionGroup
                     transitionName="test"
                     transitionEnterTimeout={500}

@@ -6,6 +6,14 @@
     background: #fefefe;
 }
 
+.tof-game h2 {
+    font-size: 23px;
+}
+
+.tof-game h3 {
+    font-size: 20px;
+}
+
 .tof-animation-enter {
     opacity: 0.01;
 }
@@ -22,4 +30,32 @@
 .tof-animation-leave.tof-animation-leave-active {
     opacity: 0.01;
     transition: opacity 300ms ease-in;
+}
+
+.tof-question {
+    text-align: center;
+}
+
+.tof-question-buttons {
+    margin: 10px 0;
+}
+
+.tof-question-buttons button {
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+.tof-result {
+    font-size: 25px;
+}
+
+.tof-result i {
+    display: inline-block;
+}
+
+.tof-result button {
+    display: block; 
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }

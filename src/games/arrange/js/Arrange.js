@@ -12,7 +12,7 @@ class Arrange extends Component {
         super();
 
         this.state = {
-            example: 0,
+            examples: [],
             words: [],
             selected: -1,
             currentStep: 0,
@@ -22,22 +22,33 @@ class Arrange extends Component {
         this.handleWordPlace = this.handleWordPlace.bind(this);
         this.handleWordSelect = this.handleWordSelect.bind(this);
         this.handleStepBack = this.handleStepBack.bind(this);
+        this.handleNextQuestion = this.handleNextQuestion.bind(this)
     }
 
     componentWillMount() {
-        const example = Math.floor(Math.random() * examples.length);
-
-        const currentExample = examples[example];
-
-        let words = currentExample.words.slice();
-        let places = currentExample.places.slice();
+        let currentExample = 0;
+        let words = examples[currentExample].words.slice();
+        let places = examples[currentExample].places.slice();
         let steps = [{
             places: places
         }];
 
         shuffle(words);
 
-        this.setState({ example: example, words: words, steps: steps });
+        this.setState({ examples: examples.slice(), example: currentExample, words: words, steps: steps });
+    }
+
+    handleNextQuestion() {
+        let currentExample = this.state.example + 1;
+        let words = examples[currentExample].words.slice();
+        let places = examples[currentExample].places.slice();
+        let steps = [{
+            places: places
+        }];
+
+        shuffle(words);
+
+        this.setState({example: currentExample, words: words, steps: steps, currentStep: 0 });
     }
 
     handleWordSelect(i) {
@@ -77,6 +88,13 @@ class Arrange extends Component {
     }
 
     render() {
+        if (this.state.example == this.state.examples.length) {
+            return (
+                <div className="arrange-game"><h2>Koniec gry</h2></div>
+            );
+        }
+        let notFirstStep = !(this.state.currentStep == 0);
+
         let isSelecting = this.state.selected != -1 ? true : false;
 
         let currentStep = this.state.currentStep;
@@ -128,11 +146,10 @@ class Arrange extends Component {
             result = <div className="arrange-done arrange-ok">Jest dobrze <i className="fa fa-check"></i></div>
         else if (!isOk && allFilled)
             result = <div className="arrange-done arrange-wrong">Coś jest nie tak <i className="fa fa-times"></i></div>
-
+        
         return (
             <div className="arrange-game">
                 <header className="arrange-header">
-                    <button onClick={this.handleStepBack}>Cofnij</button>
                     <h2 className="arrange-title">Z podanych wyrazów ułóż nagłówek, który ma charakter click baita</h2>
                 </header>
                 <div className="arrange-places">
@@ -141,7 +158,9 @@ class Arrange extends Component {
                 <div className="arrange-words">
                     {words}
                 </div>
+                {notFirstStep && ! isOk && <button className="arrange-step-back" onClick={this.handleStepBack}>Cofnij</button>}
                 {allFilled && result}
+                {isOk && <button onClick={this.handleNextQuestion}>Następne pytanie</button>}
             </div>
         );
     }

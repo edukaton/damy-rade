@@ -66,3 +66,8 @@
 .arrange-ok i {
     color: green;
 }
+
+.arrange-step-back {
+    font-size: 20px;
+    margin: 10px;
+}

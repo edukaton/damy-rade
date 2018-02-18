@@ -1,3 +1,13 @@
 .home {
     background: #eee;
+    margin: 0 auto;
+    text-align: center;
+}
+h1 {
+    display: inline-block;
+}
+.direction {
+    font-size:3em; 
+    color:Tomato;
+    display: inline-block;
 }

@@ -9,6 +9,11 @@ function Home(props) {
         */
         <div className="home">
             <h1>Strona główna</h1>
+            <div className="direction">
+            <i class="fas fa-caret-square-right"></i>
+
+
+</div>
         </div>
     );
 }

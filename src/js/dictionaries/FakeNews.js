@@ -1,13 +1,16 @@
 import React from 'react';
 import '../../css/Dictionary.css';
+import { Link } from "react-router-dom";
 
 function FakeNews(props) {
     return (
-        /*
-            -<Link title="Strona główna" to='/' className="drop-down-title">START</Link>
-            +<Link title="Informacje dotyczące wyłudzeń danych w internecie" to='/wyludzanie-danych'>Phishing</Link>
-            */
         <div className="dictionary">
+            <div className="navback">
+                <Link title="Strona główna" to='/'><div className="direction"><i class="fas fa-caret-square-left"></i> Wróć do Start</div></Link>
+            </div>
+            <div className="navnext">
+                <Link title="Informacje dotyczące wyłudzeń danych w internecie" to='/wyludzanie-danych'><div className="direction">Przejdź do Phishing <i class="fas fa-caret-square-right"></i></div></Link>
+            </div>
             <h1 className="dictionary-title">FAKE NEWS (fałszywe wiadomości)</h1>
             <p className="dictionary-p">
             
@@ -26,6 +29,13 @@ function FakeNews(props) {
 
             <h2 className="dictionary-subtitle"></h2>
             <img className="dictionary-image" />
+            
+            <div className="navback">
+                <Link title="Strona główna" to='/'><div className="direction"><i class="fas fa-caret-square-left"></i> Wróć do Start</div></Link>
+            </div>
+            <div className="navnext">
+                <Link title="Informacje dotyczące wyłudzeń danych w internecie" to='/wyludzanie-danych'><div className="direction">Przejdź do Phishing <i class="fas fa-caret-square-right"></i></div></Link>
+            </div>
         </div>
     );
 }

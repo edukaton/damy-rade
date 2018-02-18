@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Link } from "react-router-dom";
 import '../css/tof.css';
 
 import Question from './question';
@@ -127,13 +127,21 @@ class Tof extends Component {
             }
     
             return (
-                /*
-                -<Link title="Informacje dotyczące subiektywnych dowodów w internecie" to='/wybieranie-wisienek'>Wybieranie wisienek</Link>
-                +<Link title="Zadanie praktyczne o niechcianych wiadomości w internecie" to='/gra/spam'>Spam</Link>
-                */
+                <div className="tof">
+                <div className="navback">
+            <Link title="Informacje dotyczące subiektywnych dowodów w internecie" to='/wybieranie-wisienek'><div className="direction"><i className="fa fa-caret-square-o-left"></i> Wróć do poprzedniego hasła</div></Link>
+            </div>
+            <div className="navnext">
+            <Link title="Zadanie praktyczne o niechcianych wiadomości w internecie" to='/gra/spam'><div className="direction">Przejdź do następnego zadania <i className="fa fa-caret-square-o-right"></i></div></Link>
+            </div>   
+            <div className="instruction">
+                INSTRUKCJA: Zaznacz włąściwą odpowiedź klikając w pole TAK lub pole NIE.
+            </div>
                 <div className="tof-game">
+                 
                     {questionDOM}
                     {result}
+                </div>
                 </div>
             );    
         }
@@ -141,6 +149,12 @@ class Tof extends Component {
             return (
             <div>
                 <h2>Koniec pytań</h2>
+                <div className="navback">
+                 <Link title="Informacje dotyczące subiektywnych dowodów w internecie" to='/wybieranie-wisienek'><div className="direction"><i className="fa fa-caret-square-o-left"></i> Wróć do poprzedniego hasła</div></Link>
+            </div>
+            <div className="navnext">
+            <Link title="Zadanie praktyczne o niechcianych wiadomości w internecie" to='/gra/spam'><div className="direction">Przejdź do następnego zadania  <i className="fa fa-caret-square-o-right"></i></div></Link>
+            </div>   
             </div>
             );
         }

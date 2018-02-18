@@ -17,7 +17,7 @@ function Home(props) {
             
          
             <div className="navnextt">
-            <Link title="Informacje dotyczące fałszywych wiadomości w internecie" to='/falszywe-wiadomosci'><div className="direction">Rozpocznij kurs<i className="fa fa-caret-square-o-right"></i></div></Link>
+            <Link title="Informacje dotyczące fałszywych wiadomości w internecie" to='/falszywe-wiadomosci'><div className="direction">Rozpocznij kurs <i className="fa fa-caret-square-o-right"></i></div></Link>
             
         </div>
         </div>

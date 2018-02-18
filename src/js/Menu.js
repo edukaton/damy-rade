@@ -8,7 +8,7 @@ function Menu(props) {
     return (
         <div className="menu">
             <Link title="Strona główna" to='/' className="drop-down-title">START</Link>
-            <DropDown srtitle="Kliknij, aby rozwinąć zawartość słowniczka" title="WIEM">
+            <DropDown srtitle="Kliknij, aby rozwinąć zawartość słowniczka" title="WIEM"> 
                 <Link title="Informacje dotyczące fałszywych wiadomości w internecie" to='/falszywe-wiadomosci'>Fake news</Link>
                 <Link title="Informacje dotyczące wyłudzeń danych w internecie" to='/wyludzanie-danych'>Phishing</Link>
                 <Link title="Informacje dotyczące blokowania reklam w internecie" to='/blokowanie-reklam'>Adblock</Link>
@@ -23,7 +23,7 @@ function Menu(props) {
             <DropDown srtitle="Kliknij, aby rozwinąć zawartość zadania praktyczne" title="DZIAŁAM">
                 <Link title="Zadanie praktyczne o fałszywych informacjach i wyłudzeniach danych" to='/prawda-albo-falsz'>Prawda albo fałsz</Link>
                 <Link title="Zadanie praktyczne o niechcianych wiadomości w internecie" to='/gra/spam'>Spam</Link>
-                <Link title="Zadanie praktyczne o krzykliwych nagłówkach w internecie" to='/jednoreki'>Jednoreki bandyta</Link>
+                <Link title="Zadanie praktyczne o krzykliwych nagłówkach w internecie" to='/jednoreki'>Kasyno wiedzy</Link>
                 <Link title="Zadanie praktyczne o krzykliwych nagłówkach w internecie" to='/gra/ukladanie'>Układanie</Link>
             </DropDown>
             <Link title="Miejsce do przygotowania własnych notatek" to="/pamietnik" className="drop-down-title">PAMIĘTAM</Link>

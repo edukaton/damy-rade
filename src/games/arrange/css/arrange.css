@@ -18,7 +18,7 @@
     font-size: 20px;
     height: 20px;
     vertical-align: bottom;
-    margin: 0 10px; 
+    margin: 0 5px; 
 }
 
 .arrange-place.changable {
@@ -49,7 +49,7 @@
 }
 
 .arrange-done {
-    font-size: 30px;
+    font-size: 55px;
     user-select: none;
 }
 

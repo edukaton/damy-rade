@@ -9,14 +9,14 @@ function Question(props) {
     let buttons;
 
     if (trueOrFalse)
-        buttons = <div className="tof-question-buttons"><button>Prawda</button><button>Fałsz</button></div>;
+        buttons = <div className="tof-question-buttons"><button onClick={props.onTrueClick}>Prawda</button><button onClick={props.onFalseClick}>Fałsz</button></div>;
     else
-        buttons = <div className="tof-question-buttons"><button>Tak</button><button>Nie</button></div>;
+        buttons = <div className="tof-question-buttons"><button onClick={props.onTrueClick}>Tak</button><button onClick={props.onFalseClick}>Nie</button></div>;
 
     return (
         <div className="tof-question">
-            <h2></h2>
-            {subQuestion && <h3></h3>}
+            <h2>{question}</h2>
+            {subQuestion && <h3>{subQuestion}</h3>}
             {image && <img src={"./question-images/" + image} />}
             {buttons}
         </div>

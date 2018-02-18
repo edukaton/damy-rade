@@ -14,11 +14,19 @@ const examples = [
     },
     {
         Image: "",
-        question: "PHISHING najczęściej występuje w wiadomościach e-mail zwanych potocznie SPAMem.",
-        subQuestion: "Czy ten nagłówek zawiera manipulację? ",
+        question: "Wrzucił brudne ciuchy do środka, a po 30 minutach… [ZDJĘCIA]",
+        subQuestion: "Czy ten nagłówek zawiera manipulację?",
         trueOrFalse: false,
         isTrue: true
     },
+    {
+        Image: "",
+        question: "Zobacz torebkę za 15 tys. TEJ gwiazdy!",
+        subQuestion: "Czy jest to clickbait?",
+        trueOrFalse: false,
+        isTrue: true
+    },
+
 ]
 
 class Tof extends Component {
@@ -26,58 +34,125 @@ class Tof extends Component {
         super();
 
         this.state = {
-            currentQuestion: 0,
-            questions: []
+            questions: [],
+            answered: false,
+            goodAnswer: false
         };
 
         this.handleTrueClick = this.handleTrueClick.bind(this);
         this.handleFalseClick = this.handleFalseClick.bind(this);
+        this.handleNextQuestionClick = this.handleNextQuestionClick.bind(this);
     }
 
     componentWillMount() {
+        let localExamples = examples.concat();
 
+        shuffle(localExamples);
+
+        this.setState({ questions: localExamples });
     }
 
     handleTrueClick() {
+        let currentQuestion = this.state.questions[0];
 
+        if (this.state.answered)
+            return;
+
+        if (currentQuestion.isTrue)
+            this.setState({
+                answered: true,
+                goodAnswer: true
+            });
+        else
+            this.setState({
+                answered: true,
+                goodAnswer: false
+            });
+
+        console.log(this.state);
     }
 
     handleFalseClick() {
-    
+        let currentQuestion = this.state.questions[0];
+
+        if (this.state.answered)
+            return;
+
+        if (currentQuestion.isTrue)
+            this.setState({
+                answered: true,
+                goodAnswer: false
+            });
+        else
+            this.setState({
+                answered: true,
+                goodAnswer: true
+            });
+    }
+
+    handleNextQuestionClick() {
+        let allQuestions = this.state.questions.concat([]);
+        
+        allQuestions.splice(0, 1);
+
+        this.setState({questions: allQuestions, answered: false, goodAnswer: false})
     }
 
     render() {
-        let currentQuestion = this.state.currentQuestion;
-        let questionsNumber = this.state.questionsNumber;
+        if (this.state.questions.length > 0 ){
+            let question = this.state.questions[0];
 
-        if (currentQuestion < questionsNumber) {
-            let question = <h2>{this.state.questions[currentQuestion].text}</h2>;
-
+            let questionDOM = <Question
+                Image={question.image}
+                question={question.question}
+                subQuestion={question.subQuestion}
+                trueOrFalse={question.trueOrFalse}
+                onTrueClick={this.handleTrueClick}
+                onFalseClick={this.handleFalseClick}
+            />
+    
+            let answered = this.state.answered;
+    
+            let goodAnswer = this.state.goodAnswer;
+    
+            let result;
+    
+            console.log(this.state)
+    
+            if (answered && goodAnswer) {
+                result = <div className="tof-result tof-result-good"><span>Dobra odpowiedź</span><i className="fa fa-check"></i><button onClick={this.handleNextQuestionClick}>Następne pytanie</button></div>
+            }
+            else if (answered) {
+                result = <div className="tof-result tof-result-bad"><span>Nieprawidłowa odpowiedź</span><i className="fa fa-times"></i><button onClick={this.handleNextQuestionClick}>Następne pytanie</button></div>
+            }
+    
             return (
                 /*
                 -<Link title="Informacje dotyczące subiektywnych dowodów w internecie" to='/wybieranie-wisienek'>Wybieranie wisienek</Link>
                 +<Link title="Zadanie praktyczne o niechcianych wiadomości w internecie" to='/gra/spam'>Spam</Link>
                 */
                 <div className="tof-game">
-                    <header className="header">
-                        <h1 className="title">Czy to zdanie jest prawdziwe?</h1>
-                    </header>
-                    <div className="question">
-                            {question}
-                        <button onClick={this.handleTrueClick}>Prawda</button>
-                        <button onClick={this.handleFalseClick}>Fałsz</button>
-                    </div>
+                    {questionDOM}
+                    {result}
                 </div>
-            );
+            );    
         }
         else {
             return (
-                <div className="tof-game">
-                    <h2>Koniec</h2>
-                </div>
+            <div>
+                <h2>Koniec pytań</h2>
+            </div>
             );
         }
     }
 }
 
 export default Tof;
+
+function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+}

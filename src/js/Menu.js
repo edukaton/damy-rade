@@ -25,7 +25,6 @@ function Menu(props) {
                 <Link title="Zadanie praktyczne o niechcianych wiadomości w internecie" to='/gra/spam'>Spam</Link>
                 <Link title="Zadanie praktyczne o krzykliwych nagłówkach w internecie" to='/jednoreki'>Jednoreki bandyta</Link>
                 <Link title="Zadanie praktyczne o krzykliwych nagłówkach w internecie" to='/gra/ukladanie'>Układanie</Link>
-                <Link title="Zadanie praktyczne o krzykliwych nagłówkach w internecie" to='/d5'>5</Link>
             </DropDown>
             <Link title="Miejsce do przygotowania własnych notatek" to="/pamietnik" className="drop-down-title">PAMIĘTAM</Link>
         </div>

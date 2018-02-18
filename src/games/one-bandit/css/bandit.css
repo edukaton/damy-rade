@@ -25,7 +25,11 @@
 
 .bandit-word.changable::after {
   content: " ↓";
-  font-size: 12px;
+  font-size: 18px;
+}
+
+.bandit-words {
+  font-size: 25px;
 }
 
 .bandit-drop {

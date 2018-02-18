@@ -76,6 +76,7 @@ class Arrange extends Component {
         });
 
         let isOk = true;
+        let allFilled = true;
 
         for (let i = 0; i < this.state.places.length; i++) {
             let currentPlace = this.state.places[i];
@@ -87,12 +88,20 @@ class Arrange extends Component {
 
             if (currentWordInPlace == -1) {
                 isOk = false;
+                allFilled = false;
                 continue;
             }
 
             if (currentPlace.order != this.state.words[currentWordInPlace].goodOrder)
                 isOk = false;
         }
+
+        let result;
+
+        if (isOk) 
+            result = <div className="arrange-done arrange-ok">Jest dobrze <i className="fa fa-check"></i></div>
+        else if (!isOk && allFilled)
+            result = <div className="arrange-done arrange-wrong">Coś jest nie tak <i className="fa fa-times"></i></div> 
 
         return (
             <div className="arrange-game">
@@ -105,11 +114,7 @@ class Arrange extends Component {
                 <div className="arrange-words">
                     {words}
                 </div>
-                {isOk &&
-                    <div className="arrange-ok">
-                        <p>Jest ok</p>
-                    </div>
-                }
+                {allFilled && result}
             </div>
         );
     }

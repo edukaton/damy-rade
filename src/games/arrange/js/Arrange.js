@@ -106,7 +106,7 @@ class Arrange extends Component {
         return (
             <div className="arrange-game">
                 <header className="arrange-header">
-                    <h1 className="arrange-title">Ułóż clickbait</h1>
+                    <h2 className="arrange-title">Z podanych wyrazów ułóż nagłówek, który ma charakter click baita</h2>
                 </header>
                 <div className="arrange-places">
                     {places}

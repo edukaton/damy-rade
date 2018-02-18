@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Link } from "react-router-dom";
 import '../css/arrange.css';
 
 import Place from "./Place";
@@ -148,7 +148,15 @@ class Arrange extends Component {
             result = <div className="arrange-done arrange-wrong">Coś jest nie tak <i className="fa fa-times"></i></div>
         
         return (
+            <div className="cal">
+            <div className="navback">
+            <Link title="Zadanie praktyczne o krzykliwych nagłówkach w internecie" to='/jednoreki'><div className="direction"><i className="fa fa-caret-square-o-left"></i> Wróć do </div></Link>
+            </div>
+            <div className="navnext">
+            <Link title="Strona główna" to='/'><div className="direction">Przejdź do  strony głównej.<i className="fa fa-caret-square-o-right"></i></div></Link>
+            </div>
             <div className="arrange-game">
+            
                 <header className="arrange-header">
                     <h2 className="arrange-title">Z podanych wyrazów ułóż nagłówek, który ma charakter click baita</h2>
                 </header>
@@ -158,9 +166,10 @@ class Arrange extends Component {
                 <div className="arrange-words">
                     {words}
                 </div>
-                {notFirstStep && ! isOk && <button className="arrange-step-back" onClick={this.handleStepBack}>Cofnij</button>}
+                {notFirstStep && ! isOk && <button className="arrange-step-back button" onClick={this.handleStepBack}>Cofnij</button>}
                 {allFilled && result}
-                {isOk && <button onClick={this.handleNextQuestion}>Następne pytanie</button>}
+                {isOk && <button className="button" onClick={this.handleNextQuestion}>Następne pytanie</button>}
+            </div>
             </div>
         );
     }

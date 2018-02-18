@@ -129,7 +129,7 @@ class Bandit extends Component {
             <div className="bandit-words">
               {words}
             </div>
-            {isGood && <button onClick={this.handleNextQuestion}>Następne zadanie</button>}
+            {isGood && <button className="button"onClick={this.handleNextQuestion}>Następne zadanie</button>}
           </div>
         </div>
       );

@@ -10,8 +10,7 @@ function Home(props) {
         </div>
            <span className="bold center"> 
             Witaj w naszej aplikacji! Jeżeli dotarłeś w to miejsce to znaczy, że potrzebujesz naszej pomocy.
-            </span>
-            Dzięki naszej aplikacji poznasz podstawowe zagrożenia związane z manipulacją w Internecie. Po lewej stronie w Menu [czyt. meni] znajdziesz przycisk WIEM,  a tam słowniczek najczęściej spotykanych technik manipulacyjnych. Po kliknięciu WIEM będziesz mógł wybrać poszczególne pojęcia. Przeczytaj je, zobacz przykłady. Słowniczek możesz sobie wydrukować!
+            </span> Dzięki naszej aplikacji poznasz podstawowe zagrożenia związane z manipulacją w Internecie. Po lewej stronie w Menu [czyt. meni] znajdziesz przycisk WIEM,  a tam słowniczek najczęściej spotykanych technik manipulacyjnych. Po kliknięciu WIEM będziesz mógł wybrać poszczególne pojęcia. Przeczytaj je, zobacz przykłady. Słowniczek możesz sobie wydrukować!
             Gdy zapoznasz się ze wszystkimi pojęciami - wykonaj ćwiczenia. To przycisk DZIAŁAM w Menu. W każdym ćwiczeniu, zanim je wykonasz,  przeczytaj dokładnie instrukcję.  
             Dział PAMIĘTAM, potraktuj jako notes, w którym możesz zapisać wszystkie ważne informacje i linki. 
             Wykonałeś wszystkie ćwiczenia? Brawo!

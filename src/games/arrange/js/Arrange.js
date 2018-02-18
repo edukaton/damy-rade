@@ -13,13 +13,15 @@ class Arrange extends Component {
 
         this.state = {
             example: 0,
-            places: [],
             words: [],
             selected: -1,
+            currentStep: 0,
+            steps: []
         };
 
         this.handleWordPlace = this.handleWordPlace.bind(this);
         this.handleWordSelect = this.handleWordSelect.bind(this);
+        this.handleStepBack = this.handleStepBack.bind(this);
     }
 
     componentWillMount() {
@@ -27,12 +29,15 @@ class Arrange extends Component {
 
         const currentExample = examples[example];
 
-        let words = currentExample.words;
-        let places = currentExample.places;
+        let words = currentExample.words.slice();
+        let places = currentExample.places.slice();
+        let steps = [{
+            places: places
+        }];
 
         shuffle(words);
 
-        this.setState({ example: example, words: words, places: places });
+        this.setState({ example: example, words: words, steps: steps });
     }
 
     handleWordSelect(i) {
@@ -44,19 +49,39 @@ class Arrange extends Component {
     }
 
     handleWordPlace(place, word) {
-        let places = this.state.places.concat();
-        let words = this.state.words.concat();
+        const currentStep = this.state.currentStep;
+        const words = this.state.words.slice();
+        const steps = this.state.steps;
+        const current = steps[currentStep];
+        const step = JSON.parse(JSON.stringify(current.places.slice()));
 
-        places[place].current = word;
-        places[place].text = words[word].text;
+        step[place].current = word;
+        step[place].text = words[word].text;
 
-        this.setState({ places: places, selected: -1 });
+        this.setState({
+            steps: steps.concat([{
+                places: step
+            }]),
+            selected: -1,
+            currentStep: currentStep + 1
+        });
+    }
+
+    handleStepBack() {
+        const steps = JSON.parse(JSON.stringify(this.state.steps));
+
+        this.setState({
+            currentStep: this.state.currentStep - 1,
+            steps: steps.splice(0, steps.length - 1)
+        });
     }
 
     render() {
         let isSelecting = this.state.selected != -1 ? true : false;
 
-        let places = this.state.places.map((place, i) => {
+        let currentStep = this.state.currentStep;
+
+        let places = this.state.steps[currentStep].places.map((place, i) => {
             return <Place
                 key={i}
                 selecting={isSelecting}
@@ -78,13 +103,13 @@ class Arrange extends Component {
         let isOk = true;
         let allFilled = true;
 
-        for (let i = 0; i < this.state.places.length; i++) {
-            let currentPlace = this.state.places[i];
+        for (let i = 0; i < this.state.steps[currentStep].places.length; i++) {
+            let currentPlace = this.state.steps[currentStep].places[i];
 
             if (!currentPlace.changable)
                 continue;
 
-            let currentWordInPlace = this.state.places[i].current;
+            let currentWordInPlace = this.state.steps[currentStep].places[i].current;
 
             if (currentWordInPlace == -1) {
                 isOk = false;
@@ -97,15 +122,17 @@ class Arrange extends Component {
         }
 
         let result;
+        console.log(this.state)
 
-        if (isOk) 
+        if (isOk)
             result = <div className="arrange-done arrange-ok">Jest dobrze <i className="fa fa-check"></i></div>
         else if (!isOk && allFilled)
-            result = <div className="arrange-done arrange-wrong">Coś jest nie tak <i className="fa fa-times"></i></div> 
+            result = <div className="arrange-done arrange-wrong">Coś jest nie tak <i className="fa fa-times"></i></div>
 
         return (
             <div className="arrange-game">
                 <header className="arrange-header">
+                    <button onClick={this.handleStepBack}>Cofnij</button>
                     <h2 className="arrange-title">Z podanych wyrazów ułóż nagłówek, który ma charakter click baita</h2>
                 </header>
                 <div className="arrange-places">

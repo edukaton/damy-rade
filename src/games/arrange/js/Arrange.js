@@ -2,6 +2,40 @@ import React, { Component } from 'react';
 
 import '../css/arrange.css';
 
+const examples = [
+    {
+        words: [
+            {
+                order: 0,
+                text: ""
+            },
+            {
+                order: 0,
+                text: ""
+            },
+            {
+                order: 0,
+                text: ""
+            },
+            {
+                order: 0,
+                text: ""
+            },
+            {
+                order: 0,
+                text: ""
+            },
+            {
+                order: 0,
+                text: ""
+            }
+        ],
+        places: {
+
+        }
+    }
+]
+
 class Arrange extends Component {
     constructor() {
         super();
@@ -15,16 +49,7 @@ class Arrange extends Component {
     componentWillMount() {
         let randomWords = [];
 
-        for (let i = 0; i < 5; i++) {
-            let randomWord = {
-                text: randomQuestion(),
-                order: i
-            }
-        
-            randomWords.push(randomWord);
-        }
-
-        this.setState({words: randomWords});
+        this.setState({ words: randomWords });
     }
 
     render() {
